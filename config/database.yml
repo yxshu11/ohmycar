@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: ohmycar_development
+
+test:
+  <<: *default
+  database: ohmycar_test
+
+production:
+  <<: *default
+  database: ohmycar_production
